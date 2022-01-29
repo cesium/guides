@@ -33,7 +33,8 @@ Thanks to [thoughtbot][thoughtbot] from whom these guides are
 
 ## 📝 License
 
-<img src=".github/brand/cesium.svg" width="300">
+<img src=".github/brand/cesium-DARK.svg#gh-light-mode-only" width="300">
+<img src=".github/brand/cesium-LIGHT.svg#gh-dark-mode-only" width="300">
 
 These guides are © 2022 CeSIUM. They are distributed under the [Creative
 Commons Attribution 4.0 International License][license].
