@@ -1,0 +1,6 @@
+https://github.com/commitizen/cz-cli
+https://gitmoji.dev/
+https://github.com/git/git/blob/master/Documentation/giteveryday.txt
+https://cesium.github.io/krone/2020-03-21-git-github/
+https://cbea.ms/git-commit/
+https://gist.github.com/julienbourdeau/e605e4b8b47da97c249a0f72598529c8
