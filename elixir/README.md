@@ -25,7 +25,11 @@ focus on teaching and code consistency.
 
 It can show you refactoring opportunities in your code, complex code fragments,
 warn you about common mistakes, show inconsistencies in your naming scheme and
-- if needed - help you enforce a desired coding style.
+-- if needed -- help you enforce a desired coding style.
+
+```
+mix credo --strict --all
+```
 
 Use it on all elixir code projects. Learn more [here][hexdocs-credo].
 
