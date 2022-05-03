@@ -38,4 +38,3 @@ Thanks to [thoughtbot][thoughtbot] from whom these guides are
 
 These guides are © 2022 CeSIUM. They are distributed under the [Creative
 Commons Attribution 4.0 International License][license].
-

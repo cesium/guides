@@ -49,4 +49,3 @@ recognized, such as an `i`, `j`, etc as index in a for loop and such.
 - Name variables, methods, and classes to reveal intent.
 - Treat acronyms as words in names (`XmlHttpRequest` not `XMLHTTPRequest`), even
   if the acronym is the entire name (`class Html` not `class HTML`).
-
