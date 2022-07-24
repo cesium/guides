@@ -23,12 +23,22 @@ Use it on all elixir code projects. Learn more [here][mix-format].
 [Credo][credo] is a static code analysis tool for the Elixir language with a
 focus on teaching and code consistency.
 
+```
+mix credo --strict --all
+```
+
 It can show you refactoring opportunities in your code, complex code fragments,
 warn you about common mistakes, show inconsistencies in your naming scheme and,
 if needed, help you enforce a desired coding style.
 
-```
-mix credo --strict --all
+You should even consider add it as an alias in your `mix.exs`.
+
+```elixir
+  defp aliases do
+    [
+      lint: ["credo --strict --all"]
+    ]
+  end
 ```
 
 Use it on all elixir code projects. Learn more [here][hexdocs-credo].
