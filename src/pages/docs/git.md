@@ -1,23 +1,23 @@
 ---
-title: Git / Github Workflow for CAOS
-description: A tutorial on how to use Git and Github to contribute to CAOS
+title: Git / GitHub Workflow for CAOS
+description: A tutorial on how to use Git and GitHub to contribute to CAOS
 ---
 
-A tutorial on how to use Git and Github to contribute to CAOS
+A tutorial on how to use Git and GitHub to contribute to CAOS
 
 ---
-# Git / Github Workflow for CAOS
+# Git / GitHub Workflow for CAOS
 
-Git is a source version control system created by Linus Torvalds in 2005. This guide will walk you through configuring it so that you can start contributing to CAOS. Git is is a system that works on repositories: a git repository contains all the source code of your application, as well as its history, i.e., all previous versions of it. These repositories need to be hosted somewhere, in order to be accessible by everyone. CeSIUM chose [Github](https://github.com/cesium) as its host, however, different hosts exist.
+Git is a source version control system created by Linus Torvalds in 2005. This guide will walk you through configuring it so that you can start contributing to CAOS. Git is a system that works on repositories: a git repository contains all the source code of your application, as well as its history, i.e., all previous versions of it. These repositories need to be hosted somewhere, in order to be accessible by everyone. CeSIUM chose [GitHub](https://github.com/cesium) as its host, however, different hosts exist.
 
 
-## Configuring your Github Account
+## Configuring your GitHub Account
 
-The first step is to create a Github account. Go to [Github](https://github.com) and create your account.
+The first step is to create a GitHub account. Go to [GitHub](https://github.com) and create your account.
 
 ### SSH Key
 
-After your account is created, you need to configure your SSH keys in order to be able to authenticate whenever you upload your code. An [SSH key](https://www.ssh.com/academy/ssh-keys) is an access credential that will allow git to login in Github without you having to input your email and password - which, as an authentication method, as been removed by Github altogether. To generate an SSH key, go to your terminal and type
+After your account is created, you need to configure your SSH keys in order to be able to authenticate whenever you upload your code. An [SSH key](https://www.ssh.com/academy/ssh-keys) is an access credential that will allow git to login in GitHub without you having to input your email and password - which, as an authentication method, has been removed by GitHub altogether. To generate an SSH key, go to your terminal and type
 
 ```
 ssh-keygen
@@ -31,7 +31,7 @@ To verify the keys have been generated correctly, check if the files `id_rsa` an
 ls -a ~/.ssh
 ```
 
-Now you have to upload the key to Github. To do that, go to `Settings > SSH and GPG keys > New SSH key`. Give it a title, keep the key type as `Authentication Key`, and copy the contents of the `id_rsa.pub` file to the `key` field. You can get its contents by running the command
+Now you have to upload the key to GitHub. To do that, go to `Settings > SSH and GPG keys > New SSH key`. Give it a title, keep the key type as `Authentication Key`, and copy the contents of the `id_rsa.pub` file to the `key` field. You can get its contents by running the command
 
 ```
 cat ~/.ssh/id_rsa.pub
@@ -49,7 +49,7 @@ This is not needed. If you are not a member of our organization, you can still c
 
 ## Configuring Git Locally
 
-You are almost ready to start working. But first, you need to configure your local git installation to match your Github account details.
+You are almost ready to start working. But first, you need to configure your local git installation to match your GitHub account details.
 
 First install `git` if you haven't already by using the command
 
@@ -65,7 +65,7 @@ Verify installation by running
 git -v
 ```
 
-Now you need to configure your name and your email adddress. To do so run the commands
+Now you need to configure your name and your email address. To do so run the commands
 
 ```
 git config --global user.email "YOUR EMAIL"
@@ -78,7 +78,7 @@ Congratulations! You are now ready to clone a repository!
 
 ### Not a Member of CeSIUM
 
-If you are not a member of CeSIUM on Github, you will need to fork the repository. In order to go that, go to its Github page and click the fork button on the top right corner. You should create a repository with exactly the same name under your ownership. You can clone it by running
+If you are not a member of CeSIUM on GitHub, you will need to fork the repository. In order to go that, go to its GitHub page and click the fork button on the top right corner. You should create a repository with exactly the same name under your ownership. You can clone it by running
 
 ```
 git clone git@github.com:<YOUR USERNAME>/<Project Name>.git
@@ -104,7 +104,7 @@ To create your own branch, run the command
 git switch -c <YOUR INITIALS>/<FEATURE>
 ```
 
-Your initials correspond to the first letter of your first and last name respectively, in lowercase. So, for example, if my name is John Doe, that would be `jd`. The feature corresponds to what you are working with. This should be very short (a couple of words maximum) and descriptive. Words should be separated by a hifen (`-`). For example, if John Doe was working on implementing a new team page, that could be `new-team-page`. Putting it all together, the command would be
+Your initials correspond to the first letter of your first and last name respectively, in lowercase. So, for example, if my name is John Doe, that would be `jd`. The feature corresponds to what you are working with. This should be very short (a couple of words maximum) and descriptive. Words should be separated by a hyphen (`-`). For example, if John Doe was working on implementing a new team page, that could be `new-team-page`. Putting it all together, the command would be
 
 ```
 git switch -c jd/new-team-page
@@ -115,19 +115,19 @@ With that done, open your favourite text editor. We recomend VS Code, but you ca
 
 ### I have finished my work, now what?
 
-Now that you are done (for now), you need to commit your changes to the remote repository (on Github). First check which files you have changed by running
+Now that you are done (for now), you need to commit your changes to the remote repository (on GitHub). First check which files you have changed by running
 
 ```
 git status
 ```
 
-Of these files, check which ones you want to commit andd run
+Of these files, check which ones you want to commit and run
 
 ```
 git add <files>
 ```
 
-It should be noted you can add multiple files at once, including folders, patterns .etc, like the following example
+It should be noted you can add multiple files at once, including folders, patterns, .etc, like the following example
 
 ```
 git add pages/ components/*.tsx package.json
@@ -139,7 +139,7 @@ You can check it was added successfully by rerunning `git status`. Now commit yo
 git commit -m "<YOUR COMMIT MESSAGE>"
 ```
 
-The commit message should be short, concise and to the point. It should be written in the present tense(and not the past), and should describe what you did. For example, following the previous example
+The commit message should be short, concise and to the point. It should be written in the present tense (and not the past), and should describe what you did. For example, following the previous example
 
 ```
 git commit -m "Add new team page"
@@ -159,7 +159,7 @@ git push
 
 ## Opening a Pull Request
 
-Remember when we said you could not push to `main` directly and how we would explain how to get your code into `main` later? This is the section. When you finish your work, you should open a Pull Request (or PR, for short), indicating you want to have your code merged into the `main` branch. To do that, go to Github, click the Pull Requests tab, click New Pull Request. Now you have to make multiple choices:
+Remember when we said you could not push to `main` directly and how we would explain how to get your code into `main` later? This is the section. When you finish your work, you should open a Pull Request (or PR, for short), indicating you want to have your code merged into the `main` branch. To do that, go to GitHub, click the Pull Requests tab, click New Pull Request. Now you have to make multiple choices:
 
 - Base branch: `main`
 - Compare: your branch
@@ -180,9 +180,9 @@ Once you open your PR, you may notice a few automatic checks happening, like the
 
 ![CI checks in progress](/images/git/ci.png "CI checks in progress")
 
- This checks are part of what's called *Continuous Integration / Continuous Delivery*, or CI/CD, for short. In order for your PR to be merged, these checks must pass. Normally there are 2/3 checks performed:
+ These checks are part of what's called *Continuous Integration / Continuous Delivery*, or CI/CD, for short. In order for your PR to be merged, these checks must pass. Normally there are 2/3 checks performed:
 
-- Code Quality: this checks if your code follows your style guidelines. If this task fails, you can fix it by running `npm run format` on NextJS projects and `mix format` on Elixir projects. `npm run lint` and `mix lint` might also be needed
+- Code Quality: this checks if your code follows our style guidelines. If this task fails, you can fix it by running `npm run format` on Next.js projects and `mix format` on Elixir projects. `npm run lint` and `mix lint` might also be needed
 
 - Build and Test: this only applies to backend projects, and it checks to make sure all the tests in the codebase run successfully (and that the project compiles, of course). You can simulate this task by running `mix test` on your local machine. If any tests fail, you will need to fix them before merging
 
@@ -191,7 +191,9 @@ Once you open your PR, you may notice a few automatic checks happening, like the
 
 ## Rebases, Merges and Conflicts
 
-If may happen that, in the time you opened your PR and someone approved it, another PR was merged and it causes conflicts with your code. This would be indicated in Github like the following image.
+It may happen that, in the time you opened your PR and someone approved it, another PR was merged and it causes conflicts with your code. This would be indicated in GitHub like the following image.
+
+![Merge conflicts](/images/git/conflicts.png "Merge Conflicts")
 
 To fix this, you can do two things: rebase your branch so it is up to date with `main` - we recommend doing this 90% of the time - or merging your branch with `main` - which we only recommend if the rebase process would be very difficult.
 
@@ -257,14 +259,14 @@ git push
 
 ## I have commits that shouldn't be on my branch and want to delete them. How? (Interactive rebases)
 
-This can happen when you accidentally base your branch of another branch other than `main`, or if you have an erroneous commit in the middle of your history you want to delete. To do that, you simply update `main` and do an interactive rebase:
+This can happen when you accidentally base your branch off of another branch other than `main`, or if you have an erroneous commit in the middle of your history you want to delete. To do that, you simply update `main` and do an interactive rebase:
 
 ```
 git switch main
 git pull
 git switch <YOUR BRANCH>
 git rebase -i main
-````
+```
 
 If the last command fails, you may need to set a default text editor for `git`. You do that by running the command
 
@@ -274,7 +276,7 @@ git config --global core.editor "nano"
 
 You can replace `nano` with any other editor, like `vim`, but `nano` is lightweight and easy to use.
 
-Now you simply drop the commits you don't want and keeps the ones you do, like the image.
+Now you simply drop the commits you don't want and keep the ones you do, like the image.
 
 ![Interactive Rebase in progress](/images/git/rebase.png "Interactive Rebase")
 
