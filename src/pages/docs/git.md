@@ -20,7 +20,7 @@ The first step is to create a GitHub account. Go to [GitHub](https://github.com)
 After your account is created, you need to configure your SSH keys in order to be able to authenticate whenever you upload your code. An [SSH key](https://www.ssh.com/academy/ssh-keys) is an access credential that will allow git to login in GitHub without you having to input your email and password - which, as an authentication method, has been removed by GitHub altogether. To generate an SSH key, go to your terminal and type
 
 ```
-ssh-keygen
+ssh-keygen -t ed25519 -C "<YOUR EMAIL>"
 ```
 
 Hit Enter once (you don't need to change the default file to save the key), and enter a passphrase for extra security. Don't forget it, as you will be prompted to enter it anytime you need to authenticate.
@@ -58,6 +58,7 @@ First install `git` if you haven't already by using the command
 | Ubuntu / Debian | `sudo apt-get install git` |
 | Arch / Manjaro | `sudo pacman -S git` |
 | Fedora / Red Hat | `sudo dnf -y install git` |
+| macOS | `brew install git` |
 
 Verify installation by running
 
@@ -167,8 +168,8 @@ Remember when we said you could not push to `main` directly and how we would exp
 Click "Create New Pull Request". Now you must:
 
 - Name your PR: pick a name (in the present tense) that is short and descriptive
-- Pick some reviewers: try to pick people from the board on the current year, or people who have recently contributed to the same repository
-- Assign: always assign **yourself** to your PRs
+- Pick some reviewers: try to pick people from the board on the current year, or people who have recently contributed to the same repository (only for members of the organization)
+- Assign: always assign **yourself** to your PRs (only for members of the organization)
 
 After you create the Pull Request, someone will review it. This can take up to 24h for important projects, and up to a week for everything not urgent.
 
