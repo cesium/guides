@@ -175,6 +175,10 @@ After you create the Pull Request, someone will review it. This can take up to 2
 
 The reviewer can either approve your PR, make comments or request changes. We try to review PRs in a constructive and educational manner, so don't be upset if it takes a few tries before it is approved. You learn the most by people commenting on your PR and suggesting new and better approaches to your problems, not by coding a solution.
 
+Finally, when a PR is approved, you must squash it before merging. This means clicking the *squash and merge* button on GitHub. This will reduce all your commits down to one, making the history of `main` much more readable.
+
+![Squash and Merge Button](/images/git/approved.png "Squash and Merge Button")
+
 ## Checks: CI / CD
 
 Once you open your PR, you may notice a few automatic checks happening, like the following image.
