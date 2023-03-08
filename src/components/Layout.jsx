@@ -13,15 +13,11 @@ import { ThemeSelector } from '@/components/ThemeSelector'
 
 const navigation = [
   {
-    title: 'Introduction',
-    links: [
-      { title: 'Getting started', href: '/' },
-      { title: 'Installation', href: '/docs/installation' },
-    ],
-  },
-  {
     title: 'Getting Started',
-    links: [{ title: 'Git/Github Workflow', href: '/docs/git' }],
+    links: [
+      { title: 'Installation', href: '/docs/installation' },
+      { title: 'Git/Github Workflow', href: '/docs/git' },
+    ],
   },
   {
     title: 'Core concepts',
