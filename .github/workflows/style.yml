@@ -2,7 +2,7 @@ name: Code Quality
 
 on:
   pull_request:
-    branches: [main, develop]
+    branches: [main, documentation]
     types: [opened, synchronize]
 
 jobs:
