@@ -12,10 +12,10 @@ A guide on installing the required software to contribute to CAOS
 We have a script that installs the basic software for you. In order to install software via that script, download it using
 
 ```bash
-wget https://raw.githubusercontent.com/cesium/guides/main/bin/caos_installation.sh
-chmod +x caos_installation.sh
-./caos_installation.sh
-rm caos_installation.sh
+wget https://docs.cesium.link/scripts/installation.sh
+chmod +x installation.sh
+./installation.sh
+rm installation.sh
 ```
 
 Note you will be prompted for your `sudo` password. If the script executed successfully, then you are done for the most part. You may want to install optional software, which we will also cover in this guide.
