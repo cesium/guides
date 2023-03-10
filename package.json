@@ -6,7 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "npx prettier --write .",
+    "test": "npm-run-all test:*",
+    "test:lint": "npm-run-all test:lint:*",
+    "test:lint:js": "next lint",
+    "test:format": "npx prettier --check ."
   },
   "browserslist": "defaults, not ie <= 11",
   "dependencies": {
