@@ -3,6 +3,12 @@
 # The -i is there because the script needs to run in an interactive shell so that the
 # source ~/.bashrc command is effective. Otherwise we cannot add plugins in ASDF
 
+append_if_exists(line, file) {
+    if [ -f $2 ]; then
+        printf $1 >> $2
+    fi
+}
+
 install_deps_arch () {
     sudo pacman -Syyy curl git
 }
@@ -20,7 +26,7 @@ install_deps_fedora() {
 }
 
 docker_no_sudo() {
-    # Run without sudo
+    # In order to run docker command without sudo
     sudo groupadd docker
     sudo usermod -aG docker $USER
     newgrp docker
@@ -30,8 +36,10 @@ docker_no_sudo() {
 install_asdf () {
     git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.11.2
 
-    printf ". \"$HOME/.asdf/asdf.sh\"\n" >> ~/.bashrc
-    printf ". \"$HOME/.asdf/completions/asdf.bash\"\n" >> ~/.bashrc
+    # Add ASDF to your shells
+    append_if_exists ". \"$HOME/.asdf/asdf.sh\"\n" >> ~/.bashrc
+    append_if_exists ". \"$HOME/.asdf/completions/asdf.bash\"\n" >> ~/.bashrc
+    append_if_exists ". \"$HOME/.asdf/asdf.sh\"\n" >> ~/.zshrc
 
     # Apply the changes so that ASDF in in $PATH
     source ~/.bashrc

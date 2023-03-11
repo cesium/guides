@@ -1,9 +1,9 @@
 ---
 title: CAOS installation guide
-description: A guide on installing the required software to contribute to CAOS
+description: A guide to installing the required software to contribute to CAOS
 ---
 
-A guide on installing the required software to contribute to CAOS
+A guide to installing the required software to contribute to CAOS
 
 ---
 
@@ -56,19 +56,22 @@ To install Docker do the following:
 
 If you are doing frontend / full stack work, it is recommended to have at least two browsers installed: Chrome/Chromium and Firefox. This is because these two use different [browser engines](https://en.wikipedia.org/wiki/Comparison_of_browser_engines), i.e., the software that renders the HTML is different, and can lead to different behaviour in different browsers. Therefore, having multiple browsers with different engines installed allows you to test your code better and helps find bugs sooner rather than later in the development process.
 
+#### CORS Everywhere
+
+Sometimes when testing with remote API (i.e. API not running on your local machine), you may encounter problems with [CORS](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/CORS). To fix this in development (read, this is not a solution for production), install the [CORS Everywhere](https://addons.mozilla.org/en-US/firefox/addon/cors-everywhere/) browser extension or [similar](https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf) in your browser. This allows you to temporarily bypass all CORS restriction (and should not be enabled when not developing for security reasons).
+
 ### Postman
 
 [Postman](https://www.postman.com) is a program that allows you to test different API endpoints by directly querying the API via HTTP instead of having to program the requests yourself. It is very useful in testing backend projects - safira, bokken, e.g. -, but also in frontend development when integrating with an API.
 
 You can download Postman using the following commands:
 
-
 | OS | Command |
 |-|-|
-Arch based | yay -S postman-bin
-Ubuntu / Debian based | sudo snap install postman
-Fedora / Red Hat | [Refer to this tutorial](https://mamchenkov.net/wordpress/2020/01/30/install-postman-on-fedora-31/)
-
+| Arch based | yay -S postman-bin |
+| Ubuntu / Debian based | sudo snap install postman |
+| Fedora / Red Hat | [Refer to this tutorial](https://mamchenkov.net/wordpress/2020/01/30/install-postman-on-fedora-31/) |
+| macOS | brew install --cask postman |
 
 If you are on Ubuntu and don't want to use snap, you can follow [this guide](https://www.how2shout.com/linux/how-to-install-postman-on-ubuntu-20-04-lts-linux/).
 
