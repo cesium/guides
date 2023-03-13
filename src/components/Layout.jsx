@@ -21,9 +21,7 @@ const navigation = [
   },
   {
     title: 'Getting Started',
-    links: [
-      { title: 'Git/Github Workflow', href: '/docs/git' },
-    ],
+    links: [{ title: 'Git/Github Workflow', href: '/docs/git' }],
   },
   {
     title: 'Core concepts',

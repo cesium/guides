@@ -6,10 +6,10 @@ description: A tutorial on how to use Git and GitHub to contribute to CAOS
 A tutorial on how to use Git and GitHub to contribute to CAOS
 
 ---
+
 # Git / GitHub Workflow for CAOS
 
 Git is a source version control system created by Linus Torvalds in 2005. This guide will walk you through configuring it so that you can start contributing to CAOS. Git is a system that works on repositories: a git repository contains all the source code of your application, as well as its history, i.e., all previous versions of it. These repositories need to be hosted somewhere, in order to be accessible by everyone. CeSIUM chose [GitHub](https://github.com/cesium) as its host, however, different hosts exist.
-
 
 ## Configuring your GitHub Account
 
@@ -41,11 +41,9 @@ cat ~/.ssh/id_rsa.pub
 
 Hit `Add SSH key` and you should be good to go as far as SSH is concerned.
 
-
 ### CeSIUM Organization
 
 This is not needed. If you are not a member of our organization, you can still contribute as an outsider by forking the project. Details on how to do it will be explained later. If you do want to be a part of our organization, please reach out to us via our socials or via [email](mailto:caos@cesium.di.uminho.pt).
-
 
 ## Configuring Git Locally
 
@@ -53,12 +51,12 @@ You are almost ready to start working. But first, you need to configure your loc
 
 First install `git` if you haven't already by using the command
 
-| OS | Command |
-| - | - |
-| Ubuntu / Debian | `sudo apt-get install git` |
-| Arch / Manjaro | `sudo pacman -S git` |
-| Fedora / Red Hat | `sudo dnf -y install git` |
-| macOS | `brew install git` |
+| OS               | Command                    |
+| ---------------- | -------------------------- |
+| Ubuntu / Debian  | `sudo apt-get install git` |
+| Arch / Manjaro   | `sudo pacman -S git`       |
+| Fedora / Red Hat | `sudo dnf -y install git`  |
+| macOS            | `brew install git`         |
 
 Verify installation by running
 
@@ -86,12 +84,12 @@ git clone git@github.com:<YOUR USERNAME>/<Project Name>.git
 ```
 
 ### A Member of CeSIUM
+
 If you are a member of the organization, cloning is as simples as running
 
 ```
 git clone git@github.com:cesium/<Project Name>.git
 ```
-
 
 ## Start contributing
 
@@ -110,7 +108,6 @@ Your initials correspond to the first letter of your first and last name respect
 ```
 git switch -c jd/new-team-page
 ```
-
 
 With that done, open your favourite text editor. We recomend VS Code, but you can pick your own.
 
@@ -175,17 +172,17 @@ After you create the Pull Request, someone will review it. This can take up to 2
 
 The reviewer can either approve your PR, make comments or request changes. We try to review PRs in a constructive and educational manner, so don't be upset if it takes a few tries before it is approved. You learn the most by people commenting on your PR and suggesting new and better approaches to your problems, not by coding a solution.
 
-Finally, when a PR is approved, you must squash it before merging. This means clicking the *squash and merge* button on GitHub. This will reduce all your commits down to one, making the history of `main` much more readable.
+Finally, when a PR is approved, you must squash it before merging. This means clicking the _squash and merge_ button on GitHub. This will reduce all your commits down to one, making the history of `main` much more readable.
 
-![Squash and Merge Button](/images/git/approved.png "Squash and Merge Button")
+![Squash and Merge Button](/images/git/approved.png 'Squash and Merge Button')
 
 ## Checks: CI / CD
 
 Once you open your PR, you may notice a few automatic checks happening, like the following image.
 
-![CI checks in progress](/images/git/ci.png "CI checks in progress")
+![CI checks in progress](/images/git/ci.png 'CI checks in progress')
 
- These checks are part of what's called *Continuous Integration / Continuous Delivery*, or CI/CD, for short. In order for your PR to be merged, these checks must pass. Normally there are 2/3 checks performed:
+These checks are part of what's called _Continuous Integration / Continuous Delivery_, or CI/CD, for short. In order for your PR to be merged, these checks must pass. Normally there are 2/3 checks performed:
 
 - Code Quality: this checks if your code follows our style guidelines. If this task fails, you can fix it by running `npm run format` on Next.js projects and `mix format` on Elixir projects. `npm run lint` and `mix lint` might also be needed
 
@@ -193,12 +190,11 @@ Once you open your PR, you may notice a few automatic checks happening, like the
 
 - Deploy Previews: deploys your branch on a temporary URL for testing purposes. If all other tasks pass, this one should not be a problem and, if it is, it probably is something DevOps related, so contact the person in charge of that.
 
-
 ## Rebases, Merges and Conflicts
 
 It may happen that, in the time you opened your PR and someone approved it, another PR was merged and it causes conflicts with your code. This would be indicated in GitHub like the following image.
 
-![Merge conflicts](/images/git/conflicts.png "Merge Conflicts")
+![Merge conflicts](/images/git/conflicts.png 'Merge Conflicts')
 
 To fix this, you can do two things: rebase your branch so it is up to date with `main` - we recommend doing this 90% of the time - or merging your branch with `main` - which we only recommend if the rebase process would be very difficult.
 
@@ -283,7 +279,7 @@ You can replace `nano` with any other editor, like `vim`, but `nano` is lightwei
 
 Now you simply drop the commits you don't want and keep the ones you do, like the image.
 
-![Interactive Rebase in progress](/images/git/rebase.png "Interactive Rebase")
+![Interactive Rebase in progress](/images/git/rebase.png 'Interactive Rebase')
 
 Now save the file and exit the editor. The rebase should succeed. If there are any conflicts, solve them. Once you are done, push your changes:
 
