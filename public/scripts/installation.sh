@@ -3,9 +3,9 @@
 # The -i is there because the script needs to run in an interactive shell so that the
 # source ~/.bashrc command is effective. Otherwise we cannot add plugins in ASDF
 
-append_if_exists(line, file) {
-    if [ -f $2 ]; then
-        printf $1 >> $2
+append_if_exists () {
+    if [ -f "$2" ]; then
+        printf "$1" >> "$2"
     fi
 }
 
@@ -37,9 +37,9 @@ install_asdf () {
     git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.11.2
 
     # Add ASDF to your shells
-    append_if_exists ". \"$HOME/.asdf/asdf.sh\"\n" >> ~/.bashrc
-    append_if_exists ". \"$HOME/.asdf/completions/asdf.bash\"\n" >> ~/.bashrc
-    append_if_exists ". \"$HOME/.asdf/asdf.sh\"\n" >> ~/.zshrc
+    append_if_exists ". \"$HOME/.asdf/asdf.sh\"\n" ~/.bashrc
+    append_if_exists ". \"$HOME/.asdf/completions/asdf.bash\"\n" ~/.bashrc
+    append_if_exists ". \"$HOME/.asdf/asdf.sh\"\n" ~/.zshrc
 
     # Apply the changes so that ASDF in in $PATH
     source ~/.bashrc
@@ -58,7 +58,6 @@ install_docker_ubuntu() {
     sudo mkdir -m 0755 -p /etc/apt/keyrings
 
     curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-    sudo mkdir -m 0755 -p /etc/apt/keyrings
 
     echo  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
