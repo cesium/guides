@@ -66,12 +66,12 @@ Sometimes when testing with remote API (i.e. API not running on your local machi
 
 You can download Postman using the following commands:
 
-| OS | Command |
-|-|-|
-| Arch based | yay -S postman-bin |
-| Ubuntu / Debian based | sudo snap install postman |
-| Fedora / Red Hat | [Refer to this tutorial](https://mamchenkov.net/wordpress/2020/01/30/install-postman-on-fedora-31/) |
-| macOS | brew install --cask postman |
+| OS                    | Command                                                                                             |
+| --------------------- | --------------------------------------------------------------------------------------------------- |
+| Arch based            | yay -S postman-bin                                                                                  |
+| Ubuntu / Debian based | sudo snap install postman                                                                           |
+| Fedora / Red Hat      | [Refer to this tutorial](https://mamchenkov.net/wordpress/2020/01/30/install-postman-on-fedora-31/) |
+| macOS                 | brew install --cask postman                                                                         |
 
 If you are on Ubuntu and don't want to use snap, you can follow [this guide](https://www.how2shout.com/linux/how-to-install-postman-on-ubuntu-20-04-lts-linux/).
 
@@ -81,9 +81,9 @@ DBeaver is a tool that helps you visualize and manage your databases. It can be 
 
 To install it, run the following command:
 
-| OS | Command |
-| - | - |
-| Arch Linux | yay -S dbeaver |
+| OS                      | Command                                                       |
+| ----------------------- | ------------------------------------------------------------- |
+| Arch Linux              | yay -S dbeaver                                                |
 | Ubuntu / Fedora / macOS | [Refer to the instructions here](https://dbeaver.io/download) |
 
 ### Heroku CLI
