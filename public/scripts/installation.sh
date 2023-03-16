@@ -37,7 +37,7 @@ install_asdf () {
     append_if_exists ". \"$HOME/.asdf/completions/asdf.bash\"\n" ~/.bashrc
     append_if_exists ". \"$HOME/.asdf/asdf.sh\"\n" ~/.zshrc
 
-    # Apply the changes so that ASDF in in $PATH
+    # Apply the changes so that ASDF is in $PATH
     source ~/.bashrc
 
     asdf plugin add elixir
