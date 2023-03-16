@@ -17,10 +17,6 @@ install_deps_ubuntu () {
     sudo apt-get install -y curl git
 }
 
-install_deps_ubuntu () {
-    sudo apt-get install -y curl git
-}
-
 install_deps_fedora() {
     sudo dnf -y install curl git
 }
