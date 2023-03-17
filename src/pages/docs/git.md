@@ -1,15 +1,15 @@
 ---
-title: Git / GitHub Workflow for CAOS
-description: A tutorial on how to use Git and GitHub to contribute to CAOS
+title: Git / GitHub Workflow for CeSIUM
+description: A tutorial on how to use Git and GitHub to contribute to CeSIUM
 ---
 
-A tutorial on how to use Git and GitHub to contribute to CAOS
+A tutorial on how to use Git and GitHub to contribute to CeSIUM
 
 ---
 
-# Git / GitHub Workflow for CAOS
+# Git / GitHub Workflow for CeSIUM
 
-Git is a source version control system created by Linus Torvalds in 2005. This guide will walk you through configuring it so that you can start contributing to CAOS. Git is a system that works on repositories: a git repository contains all the source code of your application, as well as its history, i.e., all previous versions of it. These repositories need to be hosted somewhere, in order to be accessible by everyone. CeSIUM chose [GitHub](https://github.com/cesium) as its host, however, different hosts exist.
+Git is a source version control system created by Linus Torvalds in 2005. This guide will walk you through configuring it so that you can start contributing to CeSIUM. Git is a system that works on repositories: a git repository contains all the source code of your application, as well as its history, i.e., all previous versions of it. These repositories need to be hosted somewhere, in order to be accessible by everyone. CeSIUM chose [GitHub](https://github.com/cesium) as its host, however, different hosts exist.
 
 ## Configuring your GitHub Account
 
@@ -25,19 +25,19 @@ ssh-keygen -t ed25519 -C "<YOUR EMAIL>"
 
 Hit Enter once (you don't need to change the default file to save the key), and enter a passphrase for extra security. Don't forget it, as you will be prompted to enter it anytime you need to authenticate.
 
-To verify the keys have been generated correctly, check if the files `id_rsa` and `id_rsa.pub` have been created in the `.ssh` directory. You can do that with the command
+To verify the keys have been generated correctly, check if the files `id_ed25519` and `id_ed25519.pub` have been created in the `.ssh` directory. You can do that with the command
 
 ```
 ls -a ~/.ssh
 ```
 
-Now you have to upload the key to GitHub. To do that, go to `Settings > SSH and GPG keys > New SSH key`. Give it a title, keep the key type as `Authentication Key`, and copy the contents of the `id_rsa.pub` file to the `key` field. You can get its contents by running the command
+Now you have to upload the key to GitHub. To do that, go to `Settings > SSH and GPG keys > New SSH key`. Give it a title, keep the key type as `Authentication Key`, and copy the contents of the `id_ed25519.pub` file to the `key` field. You can get its contents by running the command
 
 ```
-cat ~/.ssh/id_rsa.pub
+cat ~/.ssh/id_ed25519.pub
 ```
 
-**DO NOT UPLOAD OR SHARE YOUR `id_rsa` FILE WITH ANYONE. KEEP IT SAFE.** That is your private key and is, as the name suggests, a secret. If someone gets hold of your private key, **they can authenticate as yourself**.
+**DO NOT UPLOAD OR SHARE YOUR `id_ed25519` FILE WITH ANYONE. KEEP IT SAFE.** That is your private key and is, as the name suggests, a secret. If someone gets hold of your private key, **they can authenticate as yourself**.
 
 Hit `Add SSH key` and you should be good to go as far as SSH is concerned.
 
