@@ -44,11 +44,12 @@ Docker is a tool that allows us to run our applications in (containers)[https://
 
 To install Docker do the following:
 
-| OS | Command |
-| Arch Linux | sudo pacman -S docker docker-compose |
-| Fedora | [Refer to this guide](https://docs.docker.com/engine/install/fedora) |
-| Ubuntu | [Refer to this guide](https://docs.docker.com/engine/install/ubuntu) |
-| macOS | brew install docker && brew install docker-compose|
+| OS         | Command                                                              |
+| ---------- | -------------------------------------------------------------------- |
+| Arch Linux | sudo pacman -S docker docker-compose                                 |
+| Fedora     | [Refer to this guide](https://docs.docker.com/engine/install/fedora) |
+| Ubuntu     | [Refer to this guide](https://docs.docker.com/engine/install/ubuntu) |
+| macOS      | brew install docker && brew install docker-compose                   |
 
 ## Optional Software
 
