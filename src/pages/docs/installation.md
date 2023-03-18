@@ -1,9 +1,9 @@
 ---
-title: CAOS installation guide
-description: A guide to installing the required software to contribute to CAOS
+title: CeSIUM installation guide
+description: A guide to installing the required software to contribute to CeSIUM
 ---
 
-A guide to installing the required software to contribute to CAOS
+A guide to installing the required software to contribute to CeSIUM
 
 ---
 
