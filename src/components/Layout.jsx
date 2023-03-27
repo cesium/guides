@@ -17,6 +17,7 @@ const navigation = [
     links: [
       { title: 'Installation', href: '/docs/installation' },
       { title: 'Git/Github Workflow', href: '/docs/git' },
+      { title: 'Learning our Stack', href: '/docs/learning-our-stack' },
     ],
   },
   {
